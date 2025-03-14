@@ -58,7 +58,7 @@ import 'app/user_and_seller/view/profile_page_content/sell_item.dart';
 import 'app/user_and_seller/view/profile_page_content/showMessageSeller.dart';
 import 'app/user_and_seller/view/profile_page_content/showMessageUser.dart';
 import 'app/user_and_seller/view/seller_dashboard/seller_dashboard.dart';
-import 'app/user_and_seller/view/settings/help_support.dart';
+import 'app/user_and_seller/view/settings/help_support.dart'; //
 import 'app/user_and_seller/view/shop/check_out_page.dart';
 import 'constants/global_key.dart';
 
@@ -66,7 +66,8 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => UserSellerViewModel()), // Register ViewModel
+        ChangeNotifierProvider(
+            create: (_) => UserSellerViewModel()), // Register ViewModel
       ],
       child: MyApp(),
     ),
@@ -153,9 +154,9 @@ class MyApp extends StatelessWidget {
       route(EditProfilePage.routeName, EditProfilePage()),
       route(GstPanInputScreen.routeName, GstPanInputScreen()),
       route(RegisterPageServiceMan.routeName, RegisterPageServiceMan()),
-      route(KycPageDriver.routeName, KycPageDriver()) ,
-      
-      route(CheckOutPage.routeName, CheckOutPage("star@yopmail.com")) ,
+      route(KycPageDriver.routeName, KycPageDriver()),
+
+      route(CheckOutPage.routeName, CheckOutPage("star@yopmail.com")),
       //route(HelpSupportPage.routeName, HelpSupportPage())
     ],
     errorBuilder: (context, state) => ErrorPage(),
